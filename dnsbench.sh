@@ -9,18 +9,6 @@ if ! which bc > /dev/null
         exit 1
 fi
 
-if ! which dig > /dev/null
-    then
-    	if which drill > /dev/null
-   			then
-    		alias dig="drill"
-    	else
-        	echo "neither dig nor drill was not found. Please install dnsutils or ldns."
-        	exit 1
-    	fi
-fi
-
-
 PROVIDERS="
 1.1.1.1#cloudflare 
 1.0.0.1#cloudflare2 
