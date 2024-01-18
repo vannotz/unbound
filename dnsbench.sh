@@ -25,7 +25,7 @@ PROVIDERS="
 "
 
 # Domains to test. Duplicated domains are ok
-DOMAINS2TEST="gnu.org suckless.org archlinux.org kernel.org duckduckgo.com gimp.org videolan.org ublockorigin.com"
+DOMAINS2TEST="gnu.org suckless.org archlinux.org kernel.org duckduckgo.com gimp.org videolan.org ublockorigin.com mozilla.org openbsd.org"
 
 
 totaldomains=0
