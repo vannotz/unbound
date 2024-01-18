@@ -25,8 +25,7 @@ PROVIDERS="
 "
 
 # Domains to test. Duplicated domains are ok
-DOMAINS2TEST="www.google.com amazon.com facebook.com www.youtube.com www.reddit.com  wikipedia.org twitter.com gmail.com 
-www.google.com whatsapp.com"
+DOMAINS2TEST="gnu.org suckless.org archlinux.org kernel.org duckduckgo.com gimp.org videolan.org ublockorigin.com"
 
 
 totaldomains=0
@@ -48,7 +47,7 @@ for p in $PROVIDERS; do
     for d in $DOMAINS2TEST; do
         ttime=`dig +stats @$pip $d |grep "Query time:" | cut -d : -f 2- | cut -d " " -f 2`
 	if [ -z "$ttime" ]; then
-	    #let's have time out be 1s = 1000ms
+	    #let's have time out be 1s = 500ms
 	    ttime=500
 	fi
         printf "%-8s" "$ttime ms"
